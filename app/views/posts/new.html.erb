@@ -1,0 +1,11 @@
+<% provide(:title, "New") %>
+<h1>Add a New Post</h1>
+<%= form_for @post do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %><br>
+	</p>
+	<%= f.submit "Add Post" %>
+<% end %>
+<BR>
+<%= link_to "ShowAll", posts_path %>

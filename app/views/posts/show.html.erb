@@ -1,0 +1,7 @@
+<% provide(:title, "Home") %>
+<h1><%= @post.name %></h1>
+<HR>
+
+<%= link_to  "Edit this Post", edit_post_path %> |
+<%= link_to  "Show all", posts_path %> |
+<%= link_to  "Delete", @post, :confirm => "Are you sure ?" , :method => :delete %>

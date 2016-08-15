@@ -1,0 +1,13 @@
+<% provide(:title, "Edit") %>
+<h1>Edit Post</h1>
+
+<%= form_for @post do |f| %>
+	<p>
+		<%= f.label :name %><BR>
+		<%= f.text_field :name, class: 'form-control' %><BR>
+	</p>
+	<%= f.submit "Update Post" %>
+<% end %>
+<BR>
+<BR>
+<%= link_to  "Go Back", post_path %>
