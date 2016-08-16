@@ -1,5 +1,9 @@
 <% provide(:title, "Home") %>
-<h1><%= @post.name %></h1>
+<h1>
+<% if @post.name %>
+<%= @post.name %>
+<% end %>
+</h1>
 <HR>
 
 <%= link_to  "Edit this Post", edit_post_path %> |
