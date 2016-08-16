@@ -1,14 +1,9 @@
 <% provide(:title, "Edit") %>
+<div class='errormesg'><%= @post.errors.full_messages if @post.errors.any? %></div>
 <h1>Edit Post</h1>
 
 <%= form_for @post do |f| %>
-    <% if f.object.errors.each do |message| %>
-       <li><%= message %></li>
-    <% end %>
-  <% end %>
-
 	<p>
-	<%= error_messages_for :post %>
 
 		<%= f.label :name %><BR>
 		<%= f.text_field :name, class: 'form-control' %><BR>
@@ -17,4 +12,4 @@
 <% end %>
 <BR>
 <BR>
-<%= link_to  "Go Back", post_path , class: "button" %>
+<%= link_to  "Go Back", post_path %>

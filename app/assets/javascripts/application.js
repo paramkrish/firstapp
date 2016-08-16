@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+setTimeout(function() {
+    $('.errormesg,.successmesg').slideUp();
+}, 3000); // <-- time in milliseconds

@@ -3,9 +3,16 @@
 <%= form_for @post do |f| %>
 	<p>
 		<%= f.label :name %><br>
-		<%= f.text_field :name %><br>
+		<%= f.text_field :name %>
+			<div class='errormesg'><%= @post.errors.full_messages.first if @post.errors.any? %></div>
+
+		<%= f.label :remarks %><br>
+		<%= f.text_field :name %>
+			<div class='errormesg'><%= @post.errors.full_messages.first if @post.errors.any? %></div>
+
 	</p>
-	<%= f.submit "Add Post" , class: "button"  %>
+
+	<%= f.submit "Add Post" , class: "btn btn-primary"  %>
 <% end %>
 <BR>
-<%= link_to "ShowAll", posts_path , class: "button"  %>
+<%= link_to "ShowAll", posts_path , class: "btn btn-info"  %>

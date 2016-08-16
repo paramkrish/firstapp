@@ -10,8 +10,23 @@
 
   <body>
   <% flash.each do |key,value| %>
-  <p><%= value %></p>
+  <div class='successmesg'><p><%= value %></p></div>
   <% end %>
-    <%= yield %>
+
+  <%= render 'partials/post' %>
+
+<html>
+
+    <div id="main-container" class="container">
+      <div class="row">
+        <div id="sidebar" class="col-xs-3">
+          <!-- sidebar content -->
+        </div>
+        <div id="content" class="col-xs-9">
+    			<%= yield %>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
