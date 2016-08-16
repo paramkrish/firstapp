@@ -1,6 +1,7 @@
 <% provide(:title, "Home") %>
 <h1>All posts</h1>
 
+<div class='posts'>
 <% if @posts.each do |post| %>
 <%= link_to  post.name,post %>
 <BR>
@@ -8,8 +9,9 @@
 <% end.empty? %>
 <i><p>There are no posts created yet.</p></i>
 <% end %>
+</div>
 <BR>
 <hr>
 <BR>
 
-<%= link_to "Add New Post", new_post_path %>
+<%= link_to "Add New Post" , new_post_path , class: 'button' %>
