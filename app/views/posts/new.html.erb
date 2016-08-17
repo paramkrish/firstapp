@@ -1,5 +1,5 @@
 <% provide(:title, "New") %>
-<h1>Add a New Post</h1>
+<div class='well'>Add a New Post</div>
 <%= form_for @post do |f| %>
 	<p>
 		<%= f.label :name %><br>
@@ -7,7 +7,9 @@
 			<div class='errormesg'><%= @post.errors.full_messages.first if @post.errors.any? %></div>
 
 		<%= f.label :remarks %><br>
-		<%= f.text_field :name %>
+
+
+			<input type='text' class="sm6" id='datetimepicker1' />
 			<div class='errormesg'><%= @post.errors.full_messages.first if @post.errors.any? %></div>
 
 	</p>

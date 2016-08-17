@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   end
 
   def user_params
-    params.require(:post).permit(:name)
+    params.require(:post).permit(:name,:remarks)
   end
 
 end

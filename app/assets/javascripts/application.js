@@ -13,8 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
 
 setTimeout(function() {
-    $('.errormesg,.successmesg').slideUp();
+    $('.alert,.errormesg,.successmesg').fadeOut();
 }, 3000); // <-- time in milliseconds
+
+$(function() {
+                $('#datetimepicker1').datetimepicker( { format : "DD-MMM-YYYY"} );
+});

@@ -7,8 +7,16 @@
 
 		<%= f.label :name %><BR>
 		<%= f.text_field :name, class: 'form-control' %><BR>
+
 	</p>
-	<%= f.submit "Update Post" %>
+	<p>
+
+		<%= f.label :remarks %><BR>
+		<%= f.text_field :remarks, class: 'form-control' %><BR>
+		
+	</p>
+
+	<%= f.submit "Update Post", class:"btn btn-success" %>
 <% end %>
 <BR>
 <BR>
